@@ -11,42 +11,42 @@ services:
     networks:
       - app-net
 
-  frontend-1:
-    build: ./web-attacks-frontend-1
-    container_name: frontend-1
+  frontend:
+    build: ./frontend
+    container_name: frontend
     ports:
       - "9100:9100"
     networks:
       - app-net
     volumes:
-      - ./web-attacks-frontend-1:/app
+      - ./frontend:/app
       - /app/node_modules
 
-  frontend-2:
-    build: ./web-attacks-frontend-2
-    container_name: frontend-2
+  haker:
+    build: ./haker
+    container_name: haker
     ports:
       - "3000:3000"
     networks:
       - app-net
     volumes:
-      - ./web-attacks-frontend-2:/app
-      - node_modules_frontend_2:/app/node_modules
+      - ./haker:/app
+      - haker:/app/node_modules
 
   backend:
-    build: ./web-attacks-backend
+    build: ./backend
     container_name: backend
     ports:
       - "5000:5000"
     networks:
       - app-net
     volumes:
-      - ./web-attacks-backend:/app
-      - node_modules_backend:/app/node_modules
+      - ./backend:/app
+      - backend:/app/node_modules
 
 volumes:
-  node_modules_frontend_2:
-  node_modules_backend:
+  haker:
+  backend:
 
 networks:
   app-net:
