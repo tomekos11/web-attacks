@@ -1,9 +1,13 @@
 Steps to recreate:
 
-1. Add to rules to hosts:
+1. Navigate to WSL if on Windows
+   
+3. git clone --recurse-submodules https://github.com/tomekos11/web-attacks.git (INTO WSL)
+   
+5. Add to rules to hosts:
   - 127.0.0.1 frontend-1.wa.local
   - 127.0.0.1 frontend-2.wa.haker.local
   - 127.0.0.1 backend.wa.local
 
-2. docker-compose build
-3. docker-compose up -d
+4. docker-compose build
+5. docker-compose up -d
