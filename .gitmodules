@@ -1,0 +1,9 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/tomekos11/web-attacks-frontend
+[submodule "backend"]
+	path = backend
+	url = https://github.com/tomekos11/web-attacks-backend
+[submodule "haker"]
+	path = haker
+	url = https://github.com/tomekos11/web-attacks-form-and-clickjacking
